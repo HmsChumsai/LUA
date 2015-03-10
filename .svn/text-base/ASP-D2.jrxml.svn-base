@@ -1,0 +1,368 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Last Modified Date: 20140608-00 -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ASP-D2" language="groovy" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="c31093c2-31b3-4a80-a15e-32d1af5360af">
+	<property name="ireport.zoom" value="1.210000000000003"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA["/usr/local/decide/cust/clientConfirmation/v0001/ASP/"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="ThaiText1" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA["\u0E2B\u0E21\u0E32\u0E22\u0E40\u0E2B\u0E15\u0E38 : \u0E02\u0E49\u0E32\u0E1E\u0E40\u0E08\u0E49\u0E32\u0E02\u0E2D\u0E22\u0E37\u0E19\u0E22\u0E31\u0E19\u0E27\u0E48\u0E32 \u0E40\u0E1B\u0E47\u0E19\u0E1C\u0E39\u0E49\u0E2A\u0E48\u0E07\u0E04\u0E33\u0E2A\u0E31\u0E48\u0E07\u0E0B\u0E37\u0E49\u0E2D\u0E02\u0E32\u0E22\u0E17\u0E38\u0E01\u0E23\u0E32\u0E22\u0E01\u0E32\u0E23\u0E02\u0E49\u0E32\u0E07\u0E15\u0E49\u0E19\u0E15\u0E32\u0E21\u0E27\u0E31\u0E19\u0E41\u0E25\u0E30\u0E40\u0E27\u0E25\u0E32\u0E17\u0E35\u0E48\u0E23\u0E30\u0E1A\u0E38\u0E43\u0E19\u0E40\u0E2D\u0E01\u0E2A\u0E32\u0E23\u0E19\u0E35\u0E49 \u0E17\u0E31\u0E49\u0E07\u0E19\u0E35\u0E49\u0E02\u0E49\u0E32\u0E1E\u0E40\u0E08\u0E49\u0E32"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="ThaiText2" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA["(   ) " + "\u0E44\u0E14\u0E49\u0E23\u0E31\u0E1A\u0E04\u0E33\u0E41\u0E19\u0E30\u0E19\u0E33\u0E43\u0E19\u0E01\u0E32\u0E23\u0E0B\u0E37\u0E49\u0E2D\u0E02\u0E32\u0E22\u0E08\u0E32\u0E01\u0E40\u0E08\u0E49\u0E32\u0E2B\u0E19\u0E49\u0E32\u0E17\u0E35\u0E48\u0E02\u0E2D\u0E07\u0E1A\u0E23\u0E34\u0E29\u0E31\u0E17"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="ThaiText3" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA["(   ) " + "\u0E44\u0E21\u0E48\u0E44\u0E14\u0E49\u0E23\u0E31\u0E1A\u0E04\u0E33\u0E41\u0E19\u0E30\u0E19\u0E33\u0E43\u0E19\u0E01\u0E32\u0E23\u0E0B\u0E37\u0E49\u0E2D\u0E02\u0E32\u0E22\u0E08\u0E32\u0E01\u0E40\u0E08\u0E49\u0E32\u0E2B\u0E19\u0E49\u0E32\u0E17\u0E35\u0E48\u0E02\u0E2D\u0E07\u0E1A\u0E23\u0E34\u0E29\u0E31\u0E17"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="ThaiText4" class="java.lang.String" isForPrompting="false">
+		<parameterDescription><![CDATA[]]></parameterDescription>
+		<defaultValueExpression><![CDATA["\u0E25\u0E07\u0E0A\u0E37\u0E48\u0E2D ..............................................................................\u0E1C\u0E39\u0E49\u0E2A\u0E48\u0E07\u0E04\u0E33\u0E2A\u0E31\u0E48\u0E07"]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[SELECT * FROM deposit;]]>
+	</queryString>
+	<field name="account_no" class="java.lang.Object"/>
+	<field name="account_name" class="java.lang.Object"/>
+	<field name="account_type" class="java.lang.Object"/>
+	<field name="margin_method" class="java.lang.Object"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="210" splitType="Stretch">
+			<image>
+				<reportElement uuid="42494d5b-ad69-45b0-936a-596e5d58e7dc" x="0" y="0" width="185" height="114"/>
+				<imageExpression><![CDATA["asp.gif"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement uuid="6dc27fe5-88ee-45e4-bd49-90a2776ef01e" x="459" y="0" width="343" height="74"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[ASIA PLUS SECURITIES PUBLIC COMPANY LIMITED
+175 SATHORN CITY TOWER 3/F, SOUTH SATHORN ROAD,
+TUNGMAHAMEK, SATHORN, Bangkok 10120
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="6d31b5a3-2fe2-4c39-8164-b8e145f0b27d" x="0" y="188" width="86" height="20"/>
+				<box leftPadding="2"/>
+				<textElement/>
+				<text><![CDATA[Account No.:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="78271f16-6653-40b1-9a1f-413d0e305c72" x="1" y="168" width="85" height="20"/>
+				<box leftPadding="2"/>
+				<textElement/>
+				<text><![CDATA[Account Name:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="4ec17aaa-750c-4587-8d5d-782556528960" x="459" y="74" width="143" height="40"/>
+				<textElement/>
+				<text><![CDATA[Tel: +66 (02) 285-1666
+       +66 (02) 285-1888
+       +66 (02) 680-1111]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="5cd8aad8-15c5-4c54-9c5c-0650d477ac19" x="381" y="168" width="85" height="20"/>
+				<box leftPadding="2"/>
+				<textElement/>
+				<text><![CDATA[Account Type:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="92bcda8b-02d7-451d-a268-930844230592" x="1" y="148" width="112" height="20"/>
+				<box leftPadding="2"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Account Information]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="d5b61933-3e4e-410c-89c0-8061ae38f05a" x="648" y="74" width="129" height="20"/>
+				<textElement/>
+				<text><![CDATA[Fax: +66 (02) 285-1901]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="1aa3c2f9-5d4b-4e45-a2e2-48937c9d93f5" x="381" y="188" width="85" height="20"/>
+				<box leftPadding="2"/>
+				<textElement/>
+				<text><![CDATA[Margin Method:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="0a40155c-a85f-46bc-8ff6-d4021a5b40cc" x="1" y="128" width="112" height="20"/>
+				<box leftPadding="2"/>
+				<textElement/>
+				<text><![CDATA[Broker Name:ASP]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="c16c647b-6788-4149-a007-8c1d887e84f9" x="86" y="168" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{account_name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="e1f0bfa8-0022-4638-9b0d-96032a385ac2" x="466" y="168" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{account_type}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="9a899f93-39c4-472f-a35c-31ca62047bec" x="466" y="188" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{margin_method}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="584257e7-8d2c-4532-9c89-e7ec83629168" x="86" y="188" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{account_no}]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="44" splitType="Stretch">
+			<textField pattern="MM/dd/yyyy">
+				<reportElement uuid="aaf63525-9627-4d49-a7aa-1b4b0400bf78" x="381" y="0" width="421" height="20"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA["Date: "+
+new SimpleDateFormat("MM/dd/yyyy").format(new java.util.Date()) + "   Time: "+
+new SimpleDateFormat("hh:mm:ss").format(new java.util.Date())]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="d5b219a4-2cf1-41bd-aaf4-90fa3f8c00cf" x="0" y="0" width="185" height="20"/>
+				<textElement/>
+				<text><![CDATA[Report: Confirmation Pricing By Deal]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="301e9ac0-9f22-48e0-9ccd-0ee5dcff6152" mode="Opaque" x="628" y="20" width="43" height="24" backcolor="#999999"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Premium]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="002e2aae-fd5c-43e5-be46-9332fadc04e7" mode="Opaque" x="125" y="20" width="46" height="24" backcolor="#999999"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Trade No.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="14120444-2e0e-4e4b-be8b-a90497f7a7ab" mode="Opaque" x="189" y="20" width="68" height="24" backcolor="#999999"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Series]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="e5da3d2d-1096-4375-ad8e-0111e220f9ac" mode="Opaque" x="734" y="20" width="69" height="24" backcolor="#999999"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[CDate]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="94461fd1-bb07-43c4-9299-acd6e4ae19ca" mode="Opaque" x="30" y="20" width="95" height="24" backcolor="#999999"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Order No.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="7e6b9d55-af0b-41cb-b31b-04162647e7ba" mode="Opaque" x="579" y="20" width="49" height="24" backcolor="#999999"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Realized P/L (Act.)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="ad85a6d2-b136-4056-b0da-f5491dc97178" mode="Opaque" x="671" y="20" width="63" height="24" backcolor="#999999"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Bdate]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="42799a84-d8b9-4f67-83dd-0bb6a036d65d" mode="Opaque" x="304" y="20" width="43" height="24" backcolor="#999999"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Source Type]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="8ee522c8-fb99-42a1-8a2f-4880eeb39beb" mode="Opaque" x="371" y="20" width="48" height="24" backcolor="#999999"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Deal Price]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="57406a73-1d25-4cb0-817c-69f81f3985d0" mode="Opaque" x="464" y="20" width="72" height="24" backcolor="#999999"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Realized P/L(Avg.)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="f3479adf-2529-47b4-b876-3aa0ebd6d3f4" mode="Opaque" x="257" y="20" width="47" height="24" backcolor="#999999"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Pos.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="318eb30e-64cb-490c-9fa1-29d3e83d33ff" mode="Opaque" x="347" y="20" width="24" height="24" backcolor="#999999"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Vol.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="25f641be-d3c2-48d8-a82a-e5e9dc8aafe5" mode="Opaque" x="1" y="20" width="29" height="24" backcolor="#999999"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[BOrder No.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="0198c91c-0b23-434f-a390-d53e980fdbfc" mode="Opaque" x="419" y="20" width="45" height="24" backcolor="#999999"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Trade Type]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="e5199046-fab1-4d47-a4d3-802dbb2af543" mode="Opaque" x="536" y="20" width="43" height="24" backcolor="#999999"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Act. Cost]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="44b9824c-8b19-4d0e-a396-eaa031af1d00" mode="Opaque" x="171" y="20" width="18" height="24" backcolor="#999999"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[B/S]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<detail>
+		<band height="52" splitType="Stretch">
+			<subreport>
+				<reportElement uuid="20bbc887-bce6-436a-99ef-d0931f5a6e4a" x="1" y="0" width="801" height="52"/>
+				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+				<subreportExpression><![CDATA["ASP-D2_subreport1.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+	</detail>
+</jasperReport>

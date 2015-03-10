@@ -1,0 +1,571 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ASP-D3" language="groovy" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="c31093c2-31b3-4a80-a15e-32d1af5360af">
+	<property name="ireport.zoom" value="1.771561000000001"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="489"/>
+	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA["/usr/local/decide/cust/clientConfirmation/v0001/ASP/"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="ThaiText1" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA["\u0E2B\u0E21\u0E32\u0E22\u0E40\u0E2B\u0E15\u0E38: \u0E40\u0E2D\u0E01\u0E2A\u0E32\u0E23\u0E19\u0E35\u0E49\u0E41\u0E2A\u0E14\u0E07\u0E02\u0E49\u0E2D\u0E21\u0E39\u0E25\u0E43\u0E19\u0E1A\u0E31\u0E0D\u0E0A\u0E35\u0E02\u0E2D\u0E07\u0E17\u0E48\u0E32\u0E19\u0E40\u0E1A\u0E37\u0E49\u0E2D\u0E07\u0E15\u0E49\u0E19\u0E2D\u0E22\u0E48\u0E32\u0E07\u0E44\u0E21\u0E48\u0E40\u0E1B\u0E47\u0E19\u0E17\u0E32\u0E07\u0E01\u0E32\u0E23 \u0E2B\u0E32\u0E01\u0E17\u0E48\u0E32\u0E19\u0E1B\u0E23\u0E30\u0E2A\u0E07\u0E04\u0E4C\u0E08\u0E30\u0E44\u0E14\u0E49\u0E23\u0E32\u0E22\u0E07\u0E32\u0E19\u0E2B\u0E25\u0E31\u0E07\u0E1B\u0E23\u0E31\u0E1A Settlement price \u0E42\u0E1B\u0E23\u0E14\u0E41\u0E08\u0E49\u0E07\u0E40\u0E08\u0E49\u0E32\u0E2B\u0E19\u0E49\u0E32\u0E17\u0E35\u0E48\u0E02\u0E2D\u0E07\u0E1A\u0E23\u0E34\u0E29\u0E31\u0E17"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="ThaiText2" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA["\u0E2D\u0E19\u0E36\u0E48\u0E07\u0E1A\u0E23\u0E34\u0E29\u0E31\u0E17\u0E08\u0E30\u0E08\u0E31\u0E14\u0E2A\u0E48\u0E07\u0E40\u0E2D\u0E01\u0E2A\u0E32\u0E23\u0E22\u0E37\u0E19\u0E22\u0E31\u0E19\u0E09\u0E1A\u0E31\u0E1A\u0E2A\u0E21\u0E1A\u0E39\u0E23\u0E13\u0E4C\u0E43\u0E2B\u0E49\u0E17\u0E48\u0E32\u0E19\u0E43\u0E19\u0E27\u0E31\u0E19\u0E17\u0E33\u0E01\u0E32\u0E23\u0E16\u0E31\u0E14\u0E44\u0E1B"]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[select * from deposit,DECIDE_order;]]>
+	</queryString>
+	<field name="client_name" class="java.lang.Object"/>
+	<field name="account_no" class="java.lang.Object"/>
+	<field name="account_name" class="java.lang.Object"/>
+	<field name="buy_limit" class="java.lang.Object"/>
+	<field name="cash_balance" class="java.lang.Object"/>
+	<field name="account_type" class="java.lang.Object"/>
+	<field name="account_status" class="java.lang.Object"/>
+	<field name="ao_code" class="java.lang.Object"/>
+	<field name="margin_method" class="java.lang.Object"/>
+	<field name="legs" class="java.lang.Object"/>
+	<field name="close_only" class="java.lang.Object"/>
+	<field name="margin_calculation_method" class="java.lang.Object"/>
+	<field name="non_cash_collateral" class="java.lang.Object"/>
+	<field name="call_margin_ammount" class="java.lang.Object"/>
+	<field name="FC_collateral" class="java.lang.Object"/>
+	<field name="port_current_initial_margin" class="java.lang.Object"/>
+	<field name="port_current_maintenance_margin" class="java.lang.Object"/>
+	<field name="credit_line" class="java.lang.Object"/>
+	<field name="paid_recv" class="java.lang.Object"/>
+	<field name="port_current_enforcing_margin" class="java.lang.Object"/>
+	<field name="projected_initial_margin" class="java.lang.Object"/>
+	<field name="projected_maintenance_margin" class="java.lang.Object"/>
+	<field name="outstanding_order_margin" class="java.lang.Object"/>
+	<field name="cash_collateral" class="java.lang.Object"/>
+	<field name="total_collateral" class="java.lang.Object"/>
+	<field name="credit_limit" class="java.lang.Object"/>
+	<field name="comm_vat" class="java.lang.Object"/>
+	<field name="total_real" class="java.lang.Object"/>
+	<field name="total_unreal" class="java.lang.Object"/>
+	<field name="options_mm" class="java.lang.Object"/>
+	<field name="previous_value" class="java.lang.Object"/>
+	<field name="liquidation_value" class="java.lang.Object"/>
+	<field name="withdrawal_port" class="java.lang.Object"/>
+	<field name="est_withdrawable" class="java.lang.Object"/>
+	<field name="series" class="java.lang.Object"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="399" splitType="Stretch">
+			<image>
+				<reportElement uuid="42494d5b-ad69-45b0-936a-596e5d58e7dc" x="0" y="0" width="185" height="114"/>
+				<imageExpression><![CDATA["asp.gif"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement uuid="6dc27fe5-88ee-45e4-bd49-90a2776ef01e" x="459" y="0" width="343" height="74"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[ASIA PLUS SECURITIES PUBLIC COMPANY LIMITED
+175 SATHORN CITY TOWER 3/F, SOUTH SATHORN ROAD,
+TUNGMAHAMEK, SATHORN, Bangkok 10120
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="92bcda8b-02d7-451d-a268-930844230592" x="1" y="168" width="85" height="20"/>
+				<box leftPadding="2"/>
+				<textElement>
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[A/O Code.:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="5cd8aad8-15c5-4c54-9c5c-0650d477ac19" x="359" y="148" width="78" height="20"/>
+				<box leftPadding="2"/>
+				<textElement>
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Account Type:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="6d31b5a3-2fe2-4c39-8164-b8e145f0b27d" x="1" y="148" width="85" height="20"/>
+				<box leftPadding="2"/>
+				<textElement>
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Account No.:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="1aa3c2f9-5d4b-4e45-a2e2-48937c9d93f5" x="554" y="148" width="125" height="20"/>
+				<box leftPadding="2"/>
+				<textElement>
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Status/2 Legs/Close Only:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="c8eff331-7c9f-4f2e-a307-fcffced3c52a" x="700" y="148" width="103" height="20"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="fbacf5ae-4c11-4ecd-85e1-097c5e221bfa" x="86" y="128" width="160" height="20"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[ASP]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="0a40155c-a85f-46bc-8ff6-d4021a5b40cc" x="1" y="128" width="85" height="20"/>
+				<box leftPadding="2"/>
+				<textElement>
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Broker Name:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="8c8269df-3426-4ca3-8089-b13ab5d2e0fe" x="86" y="148" width="113" height="20"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="4ec17aaa-750c-4587-8d5d-782556528960" x="459" y="74" width="143" height="40"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Tel: +66 (02) 285-1666
+       +66 (02) 285-1888
+       +66 (02) 680-1111]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="d5b61933-3e4e-410c-89c0-8061ae38f05a" x="648" y="74" width="129" height="20"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Fax: +66 (02) 285-1901]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="0556abee-2aff-4a66-a5df-48add7bc893c" x="199" y="168" width="160" height="20"/>
+				<textElement>
+					<font fontName="Arial Unicode MS" size="8" isItalic="false" isUnderline="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[""+$F{client_name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="a45a9984-1372-4907-9d0a-f2cc9e2c946f" x="86" y="148" width="113" height="20"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[""+$F{account_no}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="a9fb3692-8683-493e-bfc2-5b5994f0e0dc" x="199" y="148" width="160" height="20"/>
+				<textElement>
+					<font fontName="Arial Unicode MS" size="8" isItalic="false" isUnderline="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[""+$F{account_name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="c563d478-e18d-4163-b85b-29301c7bc60f" x="437" y="148" width="117" height="20"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[""+$F{account_type}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="5c943baf-f9c8-4e8f-816d-aa0bd0c29e8d" x="679" y="148" width="123" height="20"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[""+$F{account_status}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="c782b8cb-9d6f-4581-a469-33d5fa05557f" x="86" y="168" width="113" height="20"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[""+$F{ao_code}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="411e51eb-bfa5-4e0e-89fe-9b1ba5e4a22d" x="359" y="168" width="78" height="20"/>
+				<box leftPadding="2"/>
+				<textElement>
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Margin Method:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="e58e51d4-18f8-49f6-bd4e-a211fd9c6e66" x="554" y="168" width="125" height="20"/>
+				<box leftPadding="2"/>
+				<textElement>
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Margin Cal. Method:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="2cd8d0df-e90c-4d7c-82b3-9bfb10982a9e" x="534" y="310" width="100" height="20"/>
+				<textElement>
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Previous M2M (22)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="65b2f50a-6361-46e6-923a-6d7eba4f1cb9" x="534" y="330" width="100" height="19"/>
+				<textElement>
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Liquidation Value (23)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="411f0907-f561-45de-aa03-258331c79f06" x="0" y="191" width="100" height="20"/>
+				<textElement>
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Realized Port Status]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="8c9d677c-c323-4229-b929-125ec31314f2" x="534" y="349" width="100" height="20"/>
+				<textElement>
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Est.Withdrawable (24)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="c5df4e27-dd5d-4299-9426-e86a186f87c5" x="272" y="236" width="100" height="19"/>
+				<textElement>
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Paid / Recv (10)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="743ef3ac-8c00-48e0-9924-293fc28bf8b1" x="0" y="236" width="100" height="19"/>
+				<textElement>
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Current MM. (2)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="1cbf80e8-6226-4b5b-9391-14e02e857c8a" x="272" y="219" width="100" height="16"/>
+				<textElement>
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Cash Collateral (9)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="9d8f7e9b-a377-4906-b7c0-f110d8fa04a8" x="534" y="272" width="114" height="18"/>
+				<textElement>
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Total Unreal. Paid / Recv (20)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="1105673d-af4c-4e30-bae4-70d5e5b5d05b" x="534" y="219" width="100" height="17"/>
+				<textElement>
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Credit Line (17)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="f65cb1f4-514d-4ed9-b089-15665b43a883" x="1" y="255" width="100" height="17"/>
+				<textElement>
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Current EM. (3)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="caac9c10-862e-4c0d-88b0-aa8cf247eaaf" x="272" y="310" width="100" height="20"/>
+				<textElement>
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Non Cash Collateral (14)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="880e9e7c-8db4-41e1-8460-fc7d5afc0b5a" x="0" y="330" width="100" height="19"/>
+				<textElement>
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Ost. Order Margin (7)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="a2df2102-9b68-472b-80ce-f929afcc7b28" x="272" y="272" width="100" height="18"/>
+				<textElement>
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Com + VAT (12)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="f3c2e544-e7c4-4a5d-a9e8-7dccedfbe865" x="272" y="349" width="100" height="20"/>
+				<textElement>
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Total Collateral (16)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="f8d9b037-6a3d-4e90-863f-c0910dfe2658" x="272" y="255" width="100" height="17"/>
+				<textElement>
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Deposit / Withdraw (11)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="d8647e96-7108-44b4-95b4-0e305173fcdd" x="1" y="349" width="100" height="20"/>
+				<textElement>
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Credit Available]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="aa1b69b4-a901-42e0-9596-5be8584fdbb3" x="534" y="255" width="100" height="17"/>
+				<textElement>
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Total Real / Recv (19)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="76e29409-c2e4-44ee-9368-d20c41fe416b" x="534" y="291" width="100" height="17"/>
+				<textElement>
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Options M2M (21)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="f983bbc6-d8c2-4555-8958-82638c583d19" x="272" y="290" width="100" height="20"/>
+				<textElement>
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Cash Balance (13)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="920ff234-6fa9-4908-87e1-33abec3dc76a" x="1" y="219" width="100" height="16"/>
+				<textElement>
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Current IM. (1)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="8605d4ef-fb02-462d-a3da-63e468c4df2d" x="1" y="308" width="100" height="22"/>
+				<textElement>
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Call Amount (6)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="9797bdc1-0ea1-4be0-8b97-52b1e910639c" x="272" y="330" width="100" height="19"/>
+				<textElement>
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Foreign Collateral (15)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="0ac1825b-5821-4bb1-b082-a1a06d311c20" x="534" y="236" width="100" height="19"/>
+				<textElement>
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Credit Limit (18)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="25ab9d8a-7d27-4595-ac2b-470750713a08" x="0" y="272" width="100" height="18"/>
+				<textElement>
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Projected IM. (4)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="cde3002a-531d-4966-a251-b99a94064c31" x="0" y="291" width="100" height="17"/>
+				<textElement>
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Projected MM. (5)]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="1e97cd84-5faf-4632-8594-f8c875b540c4" x="437" y="168" width="117" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{margin_method}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="4e834eb3-594c-4a95-80a8-21cfc7ba02ec" x="679" y="171" width="123" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{margin_calculation_method}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="9ddfdd47-b114-45ed-9eed-0a9d9e6d6d71" x="407" y="236" width="112" height="19"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[""+(new DecimalFormat("###,###,##0.00")).format($F{paid_recv})]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="601033ab-3814-4d6e-8031-0e886ee64994" x="134" y="236" width="112" height="19"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[""+(new DecimalFormat("###,###,##0.00")).format($F{port_current_maintenance_margin})]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="382d1061-1d44-471f-adef-11ccfbb83a0e" x="134" y="255" width="112" height="17"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[""+(new DecimalFormat("###,###,##0.00")).format($F{port_current_enforcing_margin})]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="5834a864-a45a-4caf-9d81-0c1352fdb4f1" x="134" y="272" width="112" height="18"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[""+(new DecimalFormat("###,###,##0.00")).format($F{projected_initial_margin})]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="55ad3e7a-3a50-41d0-b0a1-efb1d47c5343" x="134" y="291" width="112" height="19"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[""+(new DecimalFormat("###,###,##0.00")).format($F{projected_maintenance_margin})]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="e444e742-5cff-42ab-bd20-96228c9cebeb" x="134" y="310" width="112" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[""+(new DecimalFormat("###,###,##0.00")).format($F{call_margin_ammount})]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="61787641-eba0-4ed2-a1e3-c34c31e29cba" x="134" y="330" width="112" height="19"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[""+(new DecimalFormat("###,###,##0.00")).format($F{outstanding_order_margin})]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="a3ed0352-4727-472c-a019-74c0811080b3" x="134" y="349" width="112" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[""+(new DecimalFormat("###,###,##0.00")).format($F{buy_limit})]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="056be7a0-dffd-425f-b782-e80358bf16d7" x="407" y="219" width="112" height="16"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[""+(new DecimalFormat("###,###,##0.00")).format($F{cash_collateral})]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="7b78fea2-7731-44e8-8887-2305319394b8" x="407" y="255" width="112" height="17"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[""+(new DecimalFormat("###,###,##0.00")).format($F{withdrawal_port})]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="ad9331bd-014b-4ce9-8e69-ab3e8ae1b080" x="407" y="272" width="112" height="19"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[""+(new DecimalFormat("###,###,##0.00")).format($F{comm_vat})]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="ea024e44-5a40-49ee-b91e-c876fb1da163" x="407" y="291" width="112" height="19"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[""+(new DecimalFormat("###,###,##0.00")).format($F{cash_balance})]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="b690e4c8-9656-4476-8235-6503cf9de2c0" x="407" y="310" width="112" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[""+(new DecimalFormat("###,###,##0.00")).format($F{non_cash_collateral})]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="976adf8c-095a-4669-a826-bd09a2f7327b" x="407" y="330" width="112" height="19"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[""+(new DecimalFormat("###,###,##0.00")).format($F{FC_collateral})]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="df093533-36c2-41db-87d2-8f7d51ce3545" x="407" y="349" width="112" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[""+(new DecimalFormat("###,###,##0.00")).format($F{total_collateral})]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="1df60ab3-461a-44c2-9005-bc89a532efa2" x="679" y="219" width="112" height="17"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[""+(new DecimalFormat("###,###,##0.00")).format($F{credit_line})]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="5884071d-a178-46ec-acdc-a834f6a97c16" x="679" y="236" width="112" height="19"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[""+(new DecimalFormat("###,###,##0.00")).format($F{credit_limit})]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="b3a5bf5a-806a-49ab-9fe0-22793da76d07" x="678" y="255" width="112" height="17"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[""+(new DecimalFormat("###,###,##0.00")).format($F{total_real})]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="a91cdba7-f22b-4089-a75a-4a23c6d54024" x="679" y="272" width="112" height="18"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[""+(new DecimalFormat("###,###,##0.00")).format($F{total_unreal})]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="93adbd06-0166-4126-93d8-c72ead04452f" x="678" y="291" width="112" height="17"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[""+(new DecimalFormat("###,###,##0.00")).format($F{options_mm})]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="e6c5cb8c-f2a3-4d1c-81eb-9b8a927cb097" x="679" y="310" width="112" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[""+(new DecimalFormat("###,###,##0.00")).format($F{previous_value})]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="6f5125a0-6c3c-4780-b58e-5264ad519ded" x="678" y="330" width="112" height="19"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[""+(new DecimalFormat("###,###,##0.00")).format($F{liquidation_value})]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="c5ee1870-b3e1-4523-9232-b11bdc1de311" x="678" y="349" width="112" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[""+(new DecimalFormat("###,###,##0.00")).format($F{est_withdrawable})]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="8052cbd5-41d9-42f8-bb17-359bc9086d05" x="134" y="219" width="112" height="16"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[""+(new DecimalFormat("###,###,##0.00")).format($F{port_current_initial_margin})]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="21" splitType="Stretch">
+			<textField pattern="MM/dd/yyyy">
+				<reportElement uuid="aaf63525-9627-4d49-a7aa-1b4b0400bf78" x="359" y="0" width="443" height="20"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Date: "+
+new SimpleDateFormat("dd/MM/yyyy").format(new java.util.Date()) + "   Time: "+
+new SimpleDateFormat("hh:mm:ss").format(new java.util.Date())]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="2ea20d7b-df68-4f23-a6cc-31f5a7b96ed9" x="1" y="0" width="164" height="20"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Report: Account Information]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<detail>
+		<band height="46" splitType="Stretch">
+			<subreport>
+				<reportElement uuid="20bbc887-bce6-436a-99ef-d0931f5a6e4a" x="1" y="0" width="801" height="38"/>
+				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+				<subreportExpression><![CDATA["ASP-D3_subreport1.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+	</detail>
+	<summary>
+		<band height="94" splitType="Stretch">
+			<textField>
+				<reportElement uuid="1b7a8f31-1bc9-4b4b-9902-444329321370" x="0" y="0" width="802" height="17"/>
+				<textElement>
+					<font fontName="Arial Unicode MS" size="8" isItalic="false" isUnderline="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{ThaiText1}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="99e6616c-5a79-4501-8160-1617f0c94fd2" x="0" y="17" width="319" height="20"/>
+				<textElement>
+					<font fontName="Arial Unicode MS" size="8" isItalic="false" isUnderline="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{ThaiText2}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="740c3e46-24ac-4bd4-ae03-92048a16bc51" x="0" y="50" width="790" height="44"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Cash Balance = (9) + (10) + (11) + (19) + (20) + (12) : Credit Available = MAX {(18) – (4) – (7), 0} ; Est. Withdrawable = MAX{(13) – MAX{(1),(4)} – (7) + [(12)], 0} :
+Liquidation Value = (13) + (21) ; Credit Limit = MIN{(16),(17)}
+
+]]></text>
+			</staticText>
+		</band>
+	</summary>
+</jasperReport>
